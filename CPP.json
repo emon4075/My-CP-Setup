@@ -1,0 +1,178 @@
+{
+	"1": {
+		"prefix": "CPP",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"#define endl '\\n'",
+			"#define ll 'long long'",
+			"using namespace std;",
+			"void FASTIO()",
+			"{",
+			"    ios::sync_with_stdio(false);",
+			"    cin.tie(NULL);",
+			"}",
+			"int main()",
+			"{",
+			"    FASTIO();",
+			"    $0",
+			"    return 0;",
+			"}"
+		],
+		"description": ""
+	},
+	"2": {
+		"prefix": "NodeS",
+		"body": [
+			"class Node",
+			"{",
+			"public:",
+			"    int Value;",
+			"    Node *Next;",
+			"    Node(int Value)",
+			"    {",
+			"        this->Value = Value;",
+			"        this->Next = NULL;",
+			"    }",
+			"};"
+		],
+		"description": ""
+	},
+	"3": {
+		"prefix": "NodeD",
+		"body": [
+			"class Node",
+			"{",
+			"public:",
+			"    int Value;",
+			"    Node *Next;",
+			"    Node *Previous;",
+			"    Node(int Value)",
+			"    {",
+			"        this->Value = Value;",
+			"        this->Next = NULL;",
+			"        this->Previous = NULL;",
+			"    }",
+			"};"
+		],
+		"description": ""
+	},
+	"4": {
+		"prefix": "NodeTree",
+		"body": [
+			"class Node",
+			"{",
+			"public:",
+			"    int Value;",
+			"    Node *Left;",
+			"    Node *Right;",
+			"    Node(int Value)",
+			"    {",
+			"        this->Value = Value;",
+			"        this->Left = NULL;",
+			"        this->Right = NULL;",
+			"    }",
+			"};"
+		],
+		"description": ""
+	},
+	"5": {
+		"prefix": "Test",
+		"body": [
+			"int T;",
+			"cin >> T;",
+			"while (T--)",
+			"{",
+			"    $0",
+			"}"
+		],
+		"description": ""
+	},
+	"6": {
+		"prefix": "Sieve",
+		"body": [
+			"/*",
+			" * Time Complexity ---> O(N)",
+			" * Just cout << is_Prime[Number_You_Want_To_Check] << endl;",
+			" */",
+			"const int MX = 1e7;",
+			"bitset<MX> is_Prime;",
+			"void Sieve(int N)",
+			"{",
+			"    is_Prime[2] = true;",
+			"    for (int i = 3; i <= N; i += 2)",
+			"    {",
+			"        is_Prime[i] = true;",
+			"    }",
+			"    int ITR = sqrt(N);",
+			"    for (int i = 3; i <= ITR; i += 2)",
+			"    {",
+			"        if (is_Prime[i])",
+			"        {",
+			"            for (int j = i * i; j <= N; j += i)",
+			"            {",
+			"                is_Prime[j] = false;",
+			"            }",
+			"        }",
+			"    }",
+			"}"
+		],
+		"description": ""
+	},
+	"7": {
+		"prefix": "Prime_Factorization",
+		"body": [
+			"vector<int> prime_Factors(int n)",
+			"{",
+			"    vector<int> Factors;",
+			"    for (auto P : Primes)",
+			"    {",
+			"        if (P * P > n)",
+			"        {",
+			"            break;",
+			"        }",
+			"        while (n % P == 0)",
+			"        {",
+			"            Factors.push_back(P);",
+			"            n /= P;",
+			"        }",
+			"    }",
+			"    if (n > 1)",
+			"    {",
+			"        Factors.push_back(n);",
+			"    }",
+			"    return Factors;",
+			"}"
+		],
+		"description": ""
+	},
+	"8": {
+		"prefix": "NOD",
+		"body": [
+			"int Number_of_Divisors(int n)",
+			"{",
+			"    int NOD = 1;",
+			"    for (auto P : Primes)",
+			"    {",
+			"        int Count = 0;",
+			"        if (P * P > n)",
+			"        {",
+			"            break;",
+			"        }",
+			"        while (n % P == 0)",
+			"        {",
+			"            n /= P;",
+			"            Count++;",
+			"        }",
+			"        Count++;",
+			"        NOD *= Count;",
+			"    }",
+			"    if (n > 1)",
+			"    {",
+			"        NOD *= 2;",
+			"    }",
+			"    return NOD;",
+			"}"
+		],
+		"description": ""
+	}
+}

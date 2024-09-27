@@ -1,0 +1,12 @@
+{
+	"prefix": "Test",
+	"body": [
+		"int T;",
+		"cin >> T;",
+		"while (T--)",
+		"{",
+		"    $0",
+		"}"
+	],
+	"description": ""
+}
